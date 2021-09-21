@@ -19,13 +19,7 @@ function flipCard(){
     secondCard = this;
     hasFlippedCard = false;
     checkForMath();
-    if(points == 6){
-        setTimeout(()=>{
-            window.alert("PARABÉNS VOCE VENCEU!!!")
-            location.reload();
-        }, 1500);
-       
-    }
+    fimJogo();
     
 }
 function checkForMath(){
@@ -66,4 +60,12 @@ function resetBoard(){
 cards.forEach((card)=>{
     card.addEventListener('click', flipCard)
 })
-
+function fimJogo(){
+    if(points == 6){
+        setTimeout(()=>{
+            window.alert("PARABÉNS VOCE VENCEU!!!")
+            location.reload();
+        }, 1500);
+       
+    }
+}

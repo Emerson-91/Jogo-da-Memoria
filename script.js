@@ -2,6 +2,8 @@ const cards = document.querySelectorAll('.card');
 let hasFlippedCard = false;
 let firstCard, secondCard;
 let blockBoard = false;
+let points = 0;
+
 
 function flipCard(){
     if(blockBoard) return;
@@ -17,11 +19,19 @@ function flipCard(){
     secondCard = this;
     hasFlippedCard = false;
     checkForMath();
+    if(points == 6){
+        setTimeout(()=>{
+            window.alert("PARABÉNS VOCE VENCEU!!!")
+            location.reload();
+        }, 1500);
+       
+    }
     
 }
 function checkForMath(){
     if(firstCard.dataset.card === secondCard.dataset.card){
         disableCards();
+        points++;
         return;
     }
     unflipCards();
@@ -56,3 +66,4 @@ function resetBoard(){
 cards.forEach((card)=>{
     card.addEventListener('click', flipCard)
 })
+

@@ -3,11 +3,32 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+@font-face {
+    font-family: 'Mario';
+    src: url('./font/SuperMario256.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 body{
     height: 100vh;
     display: flex;
-    background-color: rgb(12, 8, 34);
+    background-image:url(./img/background.jpg);
+    background-size: 100% 100%;
+}
+.titulo{
+    margin-left: 5%;
+    margin-top: 10%;
+    width: 10%;
+    
+ 
+}
+p{
+    margin-left: 35%;
+    font-family: 'Mario';
+    font-size: 250%;
+    color: #fff;
+    text-shadow: black 2px 2px 3px;
+    text-align: center;
 }
 .memory-game{
     height: 640px;
